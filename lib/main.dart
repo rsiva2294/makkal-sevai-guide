@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:upgrader/upgrader.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
 // Entry point of the Flutter application.
 void main() {
@@ -111,7 +110,6 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
   bool _isEnglish = true;
 
   void _toggleLanguage() {
@@ -122,20 +120,10 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> screens = [
-      ServiceFinderScreen(isEnglish: _isEnglish),
-      const CampScheduleScreen(),
-    ];
-
-    final List<String> screenTitles = [
-      _isEnglish ? 'Makkal Sevai Guide' : 'மக்கள் சேவை வழிகாட்டி',
-      _isEnglish ? 'Camp Schedule' : 'முகாம் அட்டவணை',
-    ];
-
     return UpgradeAlert(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(screenTitles[_selectedIndex]),
+          title: Text(_isEnglish ? 'Makkal Sevai Guide' : 'மக்கள் சேவை வழிகாட்டி'),
           centerTitle: true,
           actions: [
             TextButton(
@@ -155,24 +143,9 @@ class _MainScreenState extends State<MainScreen> {
           onThemeChanged: widget.onThemeChanged,
           isEnglish: _isEnglish,
         ),
-        body: IndexedStack(
-          index: _selectedIndex,
-          children: screens,
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: const Icon(Icons.search),
-              label: _isEnglish ? 'Service Search' : 'சேவை தேடல்',
-            ),
-            BottomNavigationBarItem(
-              icon: const Icon(Icons.calendar_month),
-              label: _isEnglish ? 'Camp Schedule' : 'முகாம் அட்டவணை',
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          onTap: (index) => setState(() => _selectedIndex = index),
-        ),
+        // The body is now directly the ServiceFinderScreen
+        body: ServiceFinderScreen(isEnglish: _isEnglish),
+        // No BottomNavigationBar is needed for a single screen app.
       ),
     );
   }
@@ -456,76 +429,6 @@ class AppDrawer extends StatelessWidget {
     );
   }
 }
-
-// Screen for displaying the camp schedule WebView
-class CampScheduleScreen extends StatefulWidget {
-  const CampScheduleScreen({super.key});
-
-  @override
-  State<CampScheduleScreen> createState() => _CampScheduleScreenState();
-}
-
-class _CampScheduleScreenState extends State<CampScheduleScreen> {
-  late final WebViewController _controller;
-  var _loadingPercentage = 0;
-  bool _canGoBack = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
-      ..setNavigationDelegate(
-        NavigationDelegate(
-          onPageStarted: (String url) {
-            if (mounted) setState(() => _loadingPercentage = 0);
-          },
-          onProgress: (int progress) {
-            if (mounted) setState(() => _loadingPercentage = progress);
-          },
-          onPageFinished: (String url) async {
-            if (mounted) {
-              final canGoBack = await _controller.canGoBack();
-              setState(() {
-                _loadingPercentage = 100;
-                _canGoBack = canGoBack;
-              });
-            }
-          },
-        ),
-      )
-      ..loadRequest(Uri.parse('https://ungaludanstalin.tn.gov.in/camp.php'));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return PopScope(
-      canPop: !_canGoBack,
-      onPopInvoked: (bool didPop) {
-        if (didPop) return;
-        _controller.goBack();
-      },
-      child: Scaffold(
-        // This Scaffold is necessary for the FloatingActionButton to have a place to live
-        body: Stack(
-          children: [
-            WebViewWidget(controller: _controller),
-            if (_loadingPercentage < 100)
-              LinearProgressIndicator(value: _loadingPercentage / 100.0),
-          ],
-        ),
-        floatingActionButton: _canGoBack
-            ? FloatingActionButton.small(
-          onPressed: () => _controller.goBack(),
-          child: const Icon(Icons.arrow_back),
-        )
-            : null,
-      ),
-    );
-  }
-}
-
 
 // A widget to display the details of a selected service in a card format.
 class ServiceDetailCard extends StatelessWidget {
