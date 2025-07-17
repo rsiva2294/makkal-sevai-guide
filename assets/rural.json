@@ -1,0 +1,1420 @@
+[
+  {
+    "id": 1,
+    "department": "ஊரக வளர்ச்சி மற்றும் ஊராட்சித் துறை",
+    "department_en": "Rural Development and Panchayat Raj Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/1.jpg",
+    "services": [
+      {
+        "name": "குடிநீர் இணைப்பு",
+        "name_en": "Water Connection",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "சொத்து வரி ரசீது",
+          "மழைநீர் சேகரிப்பு தொட்டி அமைத்திருக்க வேண்டும்"
+        ],
+        "documents_en": [
+          "Property Tax Receipt",
+          "Must have a Rainwater Harvesting Tank installed"
+        ]
+      },
+      {
+        "name": "கட்டிட வரைபடம் அனுமதி",
+        "name_en": "Building Plan Approval",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "கட்டிட வரைபடம்",
+          "உரிமைச் சான்று",
+          "பட்டா, சிட்டா, அடங்கல் நகல்கள்",
+          "நிலப்பகுதி அனுமதி நகல்",
+          "ஏ-படிவம், பி-படிவம், சி-படிவம்"
+        ],
+        "documents_en": [
+          "Building Plan",
+          "Ownership Certificate",
+          "Copies of Patta, Chitta, Adangal",
+          "Copy of Land Area Approval",
+          "Form-A, Form-B, Form-C"
+        ]
+      },
+      {
+        "name": "சொத்து வரி",
+        "name_en": "Property Tax",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "நில உடைமை ஆவணங்கள்",
+          "வில்லங்கச் சான்று",
+          "பட்டா நகல்"
+        ],
+        "documents_en": [
+          "Land Ownership Documents",
+          "Encumbrance Certificate",
+          "Copy of Patta"
+        ]
+      },
+      {
+        "name": "சொத்து வரி பெயர் மாற்றம்",
+        "name_en": "Property Tax Name Transfer",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "பத்திர நகல்",
+          "பட்டா நகல்",
+          "வில்லங்கச் சான்று",
+          "வரி செலுத்திய ரசீது"
+        ],
+        "documents_en": [
+          "Copy of Deed",
+          "Copy of Patta",
+          "Encumbrance Certificate",
+          "Tax Paid Receipt"
+        ]
+      },
+      {
+        "name": "மகாத்மா காந்தி தேசிய ஊரக வேலை உறுதி திட்டம்",
+        "name_en": "Mahatma Gandhi National Rural Employment Guarantee Scheme",
+        "eligibility": [
+          "18 வயதிற்கு மேல் திறன்சாரா உடல் உழைப்புத்தர தயாராக உள்ளவர்கள்"
+        ],
+        "eligibility_en": [
+          "Individuals above 18 years of age willing to do unskilled manual labor"
+        ],
+        "documents": [
+          "ஆதார் அட்டை",
+          "குடும்ப அட்டை",
+          "வங்கி கணக்கு புத்தகம்"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Ration Card",
+          "Bank Account Passbook"
+        ]
+      },
+      {
+        "name": "மகளிர் சுய உதவிக்குழு கடன்",
+        "name_en": "Women's Self-Help Group Loan",
+        "eligibility": [
+          "மகளிர் சுய உதவிக்குழுவில் உறுப்பினராக இருத்தல் வேண்டும்",
+          "18 வயது பூர்த்தி செய்து இருக்க வேண்டும்"
+        ],
+        "eligibility_en": [
+          "Must be a member of a Women's Self-Help Group",
+          "Must have completed 18 years of age"
+        ],
+        "documents": [
+          "அனைத்து உறுப்பினர்களின் கையொப்பத்துடன் கூடிய தீர்மான நகல்",
+          "சுய உதவிக்குழு உறுப்பினர்களின் ஆதார் அட்டை நகல்",
+          "வாக்காளர் அடையாள அட்டை அல்லது MGNREGS வேலை அட்டை",
+          "ஊக்குநர் மற்றும் பிரதிநிதியின் புகைப்படம் (2 எண்ணிக்கை)",
+          "மூன்றாவது வங்கிக்கடன் MCP நகல்"
+        ],
+        "documents_en": [
+          "Copy of the resolution with signatures of all members",
+          "Aadhaar card copy of SHG members",
+          "Voter ID card or MGNREGS job card",
+          "Photograph of the animator and representative (2 nos)",
+          "Copy of the third bank loan MCP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "department": "வருவாய் மற்றும் பேரிடர் மேலாண்மைத் துறை",
+    "department_en": "Revenue and Disaster Management Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/2.jpg",
+    "services": [
+      {
+        "name": "பட்டா மாற்றம் / உட்பிரிவு / பெயர் திருத்தம் / நில அளவீடு",
+        "name_en": "Patta Transfer / Subdivision / Name Correction / Land Survey",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "ஆதார் அட்டை",
+          "அடையாள ஆவணங்களில் ஏதேனும் ஒன்று",
+          "சொத்துக் குறித்த பத்திரங்கள்",
+          "வில்லங்க சான்றிதழ்",
+          "இறப்பு/வாரிசு சான்று (தேவைப்படின்)",
+          "வீட்டுமனை வரைபடம்",
+          "உட்பிரிவு கட்டணம்",
+          "பட்டா நகல் / நகர நிலஅளவை பதிவேடு",
+          "புல எல்லை அளவை கட்டணம்"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Any one of the identity documents",
+          "Property-related deeds",
+          "Encumbrance Certificate",
+          "Death/Legal Heir Certificate (if required)",
+          "Plot layout map",
+          "Subdivision fee",
+          "Copy of Patta / Town Land Survey Register",
+          "Field boundary survey fee"
+        ]
+      },
+      {
+        "name": "வாரிசு சான்றிதழ்",
+        "name_en": "Legal Heir Certificate",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "அனைத்து வாரிசுதார்களின் ஆதார் அட்டை",
+          "இறந்த நபரின் இறப்புச் சான்றிதழ்",
+          "இறந்தவரின் ஆதார் அட்டை",
+          "குடும்ப அட்டை"
+        ],
+        "documents_en": [
+          "Aadhaar card of all legal heirs",
+          "Death certificate of the deceased person",
+          "Aadhaar card of the deceased",
+          "Ration Card"
+        ]
+      },
+      {
+        "name": "சாதி சான்றிதழ்",
+        "name_en": "Community Certificate",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "ஆதார் அட்டை",
+          "பிறப்பு சான்று",
+          "பெற்றோர்/உடன்பிறந்தோர் சாதி சான்று அல்லது கல்விச் சான்று",
+          "குடும்ப அட்டை",
+          "பாஸ்போர்ட் புகைப்படம்"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Birth Certificate",
+          "Parent's/Sibling's Community Certificate or Educational Certificate",
+          "Ration Card",
+          "Passport size photograph"
+        ]
+      },
+      {
+        "name": "வருமான சான்றிதழ்",
+        "name_en": "Income Certificate",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "ஆதார் அட்டை",
+          "குடும்ப அட்டை",
+          "ஊதியச் சான்று (இருப்பின்)",
+          "நில உடைமை விவரங்கள்",
+          "பான் கார்டு"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Ration Card",
+          "Salary Certificate (if any)",
+          "Land ownership details",
+          "PAN Card"
+        ]
+      },
+      {
+        "name": "இருப்பிடம் சான்றிதழ்",
+        "name_en": "Residence Certificate",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "ஆதார் அட்டை",
+          "பிறப்புச் சான்று",
+          "குடும்ப அட்டை அல்லது அதே இடத்தில் 5 ஆண்டுகளாக வசித்து வருவதற்கான சான்று"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Birth Certificate",
+          "Ration Card or proof of residence at the same address for 5 years"
+        ]
+      },
+      {
+        "name": "சிறு/குறு விவசாய சான்று",
+        "name_en": "Small/Marginal Farmer Certificate",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "ஆதார் அட்டை",
+          "பட்டா நகல்"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Copy of Patta"
+        ]
+      },
+      {
+        "name": "OBC சான்று",
+        "name_en": "OBC Certificate",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "வருமானச் சான்று",
+          "சாதி சான்று",
+          "ஆதார் அட்டை",
+          "குடும்ப அட்டை",
+          "வருமான வரி செலுத்தியதற்கான ஆதாரம் (இருப்பின்)"
+        ],
+        "documents_en": [
+          "Income Certificate",
+          "Community Certificate",
+          "Aadhaar Card",
+          "Ration Card",
+          "Proof of income tax payment (if any)"
+        ]
+      },
+      {
+        "name": "கணவனால் கைவிடப்பட்டவர் சான்றிதழ்",
+        "name_en": "Deserted by Husband Certificate",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "ஆதார் அட்டை",
+          "குடும்ப அட்டை",
+          "திருமணத்திற்கான ஆதாரம்",
+          "கணவரால் கைவிடப்பட்டதற்கான ஆதாரம் (சட்டப்பூர்வ பிரிவினை சான்று)"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Ration Card",
+          "Proof of marriage",
+          "Proof of being deserted by husband (legal separation certificate)"
+        ]
+      },
+      {
+        "name": "காலதாமத பிறப்பு/இறப்பு பதிவு சான்றிதழ்",
+        "name_en": "Delayed Birth/Death Registration Certificate",
+        "eligibility": [
+          "சமந்தப்பட்ட வருவாய் கோட்டத்தில் பிறந்த/இறந்த நபராக இருக்க வேண்டும்"
+        ],
+        "eligibility_en": [
+          "The person must have been born/died in the concerned revenue division"
+        ],
+        "documents": [
+          "பிறப்பு/இறப்பு பதிவு இல்லா சான்று",
+          "உறுதிமொழி பத்திரம்",
+          "செய்தித்தாள் பொது விளம்பரம்",
+          "ரூ.500/- செலான் நகல்",
+          "மதிப்பெண் சான்று / பள்ளி மாற்று சான்றிதழ்",
+          "வாக்காளர் அடையாள அட்டை / ஆதார் நகல் / ஓட்டுநர் உரிமம்"
+        ],
+        "documents_en": [
+          "Non-availability of Birth/Death Registration Certificate",
+          "Affidavit",
+          "Newspaper public advertisement",
+          "Copy of ₹500/- Challan",
+          "Marksheet / School Transfer Certificate",
+          "Voter ID card / Aadhaar copy / Driver's license"
+        ]
+      },
+      {
+        "name": "முதியோர் உதவித்தொகை",
+        "name_en": "Old Age Pension",
+        "eligibility": [
+          "ஆதரவற்றவராக இருத்தல் வேண்டும்",
+          "வறுமைக்கோட்டிற்கு கீழ் உள்ளோர் பட்டியலில் இருத்தல் வேண்டும்",
+          "60 வயது மற்றும் அதற்கு மேல்"
+        ],
+        "eligibility_en": [
+          "Must be destitute",
+          "Must be in the list of people below the poverty line",
+          "60 years of age and above"
+        ],
+        "documents": [
+          "ஆதார் அட்டை",
+          "குடும்ப அட்டை",
+          "வங்கி கணக்குப் புத்தகம்",
+          "வயது சான்று"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Ration Card",
+          "Bank Account Passbook",
+          "Age proof"
+        ]
+      },
+      {
+        "name": "விதவை உதவித்தொகை",
+        "name_en": "Widow Pension",
+        "eligibility": [
+          "ஆதரவற்றவராக இருக்க வேண்டும்",
+          "வறுமைக் கோட்டிற்கு கீழ் இருக்க வேண்டும்",
+          "விதவையாக இருத்தல் வேண்டும் (18 வயது மற்றும் அதற்கு மேல்)",
+          "சொத்து மதிப்பு ரூ.1,00,000/-க்கு மிகாமல் இருக்க வேண்டும்"
+        ],
+        "eligibility_en": [
+          "Must be destitute",
+          "Must be below the poverty line",
+          "Must be a widow (18 years of age and above)",
+          "Property value should not exceed ₹1,00,000/-"
+        ],
+        "documents": [
+          "ஆதார் அட்டை",
+          "குடும்ப அட்டை",
+          "கணவரின் இறப்பு சான்றிதழ்",
+          "வாரிசுச் சான்று / வருமானச் சான்று",
+          "திருமணத்திற்கான ஆதாரம்",
+          "வங்கி கணக்குப் புத்தகம்"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Ration Card",
+          "Husband's Death Certificate",
+          "Legal Heir Certificate / Income Certificate",
+          "Proof of marriage",
+          "Bank Account Passbook"
+        ]
+      },
+      {
+        "name": "கணவனால் கைவிடப்பட்ட பெண்களுக்கான உதவித்தொகை",
+        "name_en": "Pension for Women Deserted by Husband",
+        "eligibility": [
+          "ஆதரவற்றவராக இருத்தல் வேண்டும்",
+          "வயது 30 மற்றும் அதற்கு மேல்",
+          "சட்டப்பூர்வமாக விவாகரத்தோ அல்லது குறைந்தபட்சம் 5 ஆண்டுகள் கணவரால் கைவிடப்பட்டிருக்க வேண்டும்",
+          "சொத்து மதிப்பு ரூ.1,00,000/-க்கு மிகாமல் இருக்க வேண்டும்"
+        ],
+        "eligibility_en": [
+          "Must be destitute",
+          "Age 30 and above",
+          "Must be legally divorced or deserted by husband for at least 5 years",
+          "Property value should not exceed ₹1,00,000/-"
+        ],
+        "documents": [],
+        "documents_en": []
+      },
+      {
+        "name": "திருமணமாகாத பெண்கள் உதவித்தொகை",
+        "name_en": "Unmarried Women Pension",
+        "eligibility": [
+          "ஆதரவற்றவராக இருத்தல் வேண்டும்",
+          "50 வயது மற்றும் அதற்கு மேல் திருமணமாகாத பெண்",
+          "சொத்து மதிப்பு ரூ.1,00,000/-க்கு மிகாமல் இருக்க வேண்டும்"
+        ],
+        "eligibility_en": [
+          "Must be destitute",
+          "Unmarried woman aged 50 and above",
+          "Property value should not exceed ₹1,00,000/-"
+        ],
+        "documents": [
+          "ஆதார் அட்டை",
+          "குடும்ப அட்டை",
+          "வங்கி கணக்குப் புத்தகம்",
+          "திருமணமாகாத பெண்ணென்ற சான்று",
+          "வயது சான்று"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Ration Card",
+          "Bank Account Passbook",
+          "Certificate of being an unmarried woman",
+          "Age proof"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "department": "மருத்துவம் மற்றும் மக்கள் நல்வாழ்வுத்துறை",
+    "department_en": "Health and Family Welfare Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/3.jpg",
+    "services": [
+      {
+        "name": "முதலமைச்சரின் விரிவான மருத்துவக் காப்பீட்டுத் திட்டத்தில் உறுப்பினராக சேர (CMCHIS)",
+        "name_en": "To enroll as a member in the Chief Minister's Comprehensive Health Insurance Scheme (CMCHIS)",
+        "eligibility": [
+          "தமிழ்நாட்டினை வசிப்பிடமாக கொண்டவர்",
+          "ஆண்டு வருமானம் ரூ.1,20,000 க்குள் இருக்க வேண்டும்"
+        ],
+        "eligibility_en": [
+          "Resident of Tamil Nadu",
+          "Annual income should be within ₹1,20,000"
+        ],
+        "documents": [
+          "குடும்ப அட்டை",
+          "வருமானச் சான்று",
+          "குடும்ப உறுப்பினர்களின் ஆதார் அட்டை நகல்"
+        ],
+        "documents_en": [
+          "Ration Card",
+          "Income Certificate",
+          "Copy of family members' Aadhaar cards"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "department": "எரிசக்தித் துறை",
+    "department_en": "Energy Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/4.jpg",
+    "services": [
+      {
+        "name": "மின் கட்டண பெயர் மாற்றம் (Name Transfer)",
+        "name_en": "Electricity Bill Name Transfer",
+        "eligibility": [
+          "சொத்துவரி ரசீது (அ) விற்பனைப் பத்திரம் (அ) நீதிமன்ற உத்தரவு"
+        ],
+        "eligibility_en": [
+          "Property tax receipt or Sale deed or Court order"
+        ],
+        "documents": [],
+        "documents_en": []
+      },
+      {
+        "name": "மின் கட்டண மாற்றம் (Tariff Change)",
+        "name_en": "Electricity Tariff Change",
+        "eligibility": [
+          "ஆதார் அட்டை"
+        ],
+        "eligibility_en": [
+          "Aadhaar Card"
+        ],
+        "documents": [],
+        "documents_en": []
+      },
+      {
+        "name": "வீடுகளுக்கான புதிய மின் இணைப்பு",
+        "name_en": "New Electricity Connection for Houses",
+        "eligibility": [
+          "விற்பனை பத்திரம்/பகிர்வு பத்திரம்/ பரிசு தீர்வு/ஒதுக்கீடு கடிதம்/கணினி பட்டா/நீதிமன்றத் தீர்ப்பு",
+          "உரிமையாளராக இல்லாதிருப்பின் படிவம் 5 அல்லது குடியிருப்புக்கான ஆதாரம் மற்றும் காப்புறுதி பத்திரம் (படிவம் 6)"
+        ],
+        "eligibility_en": [
+          "Sale deed/Partition deed/Gift settlement/Allotment letter/Computer patta/Court judgment",
+          "If not the owner, Form 5 or proof of residence and indemnity bond (Form 6)"
+        ],
+        "documents": [],
+        "documents_en": []
+      },
+      {
+        "name": "கூடுதல் மின் சுமை",
+        "name_en": "Additional Electricity Load",
+        "eligibility": [
+          "சொத்துவரி சம்பந்தப்பட்ட ஆவணங்கள்",
+          "அண்மையில் செலுத்தப்பட்ட மின் கட்டண ரசீது"
+        ],
+        "eligibility_en": [
+          "Property tax related documents",
+          "Recently paid electricity bill receipt"
+        ],
+        "documents": [],
+        "documents_en": []
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "department": "கூட்டுறவு, உணவு மற்றும் நுகர்வோர் பாதுகாப்புத்துறை",
+    "department_en": "Co-operation, Food and Consumer Protection Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/5.jpg",
+    "services": [
+      {
+        "name": "கூட்டுறவு சங்கம் /வங்கி மூலம் கடனுதவி",
+        "name_en": "Loan assistance through Cooperative Society / Bank",
+        "eligibility": [
+          "70 வயதிற்குட்பட்டவர்கள் விண்ணப்பிக்கலாம்"
+        ],
+        "eligibility_en": [
+          "Applicants can be under 70 years of age"
+        ],
+        "documents": [
+          "திட்ட அறிக்கை",
+          "ஆதார் அட்டை",
+          "வங்கிக் கணக்குப் புத்தகம்",
+          "வருமானச் சான்று",
+          "பாஸ்போர்ட் புகைப்படம்",
+          "சாதிச் சான்றிதழ்",
+          "PAN Card"
+        ],
+        "documents_en": [
+          "Project Report",
+          "Aadhaar Card",
+          "Bank Account Passbook",
+          "Income Certificate",
+          "Passport size photograph",
+          "Community Certificate",
+          "PAN Card"
+        ]
+      },
+      {
+        "name": "மகளிர் சுய உதவிக்குழு கடன்",
+        "name_en": "Women's Self-Help Group Loan",
+        "eligibility": [
+          "60 வயதிற்குட்பட்ட மகளிர்",
+          "குறைந்தபட்சம் 10 நபர்கள் உறுப்பினராக இருத்தல்",
+          "குழு குறைந்தது 6 மாதங்கள் செயல்பட வேண்டும்"
+        ],
+        "eligibility_en": [
+          "Women under 60 years of age",
+          "Minimum of 10 members in the group",
+          "The group should have been active for at least 6 months"
+        ],
+        "documents": [
+          "வங்கிக் கணக்கு புத்தகம்",
+          "வங்கி வரவு செலவு அறிக்கை",
+          "தீர்மான நகல்",
+          "புகைப்படம்",
+          "அடையாள ஆவணங்கள் (3)",
+          "Grading Report"
+        ],
+        "documents_en": [
+          "Bank Account Passbook",
+          "Bank Statement",
+          "Copy of Resolution",
+          "Photograph",
+          "Identity Documents (3)",
+          "Grading Report"
+        ]
+      },
+      {
+        "name": "குடும்ப அட்டையில் முகவரி மாற்றம்",
+        "name_en": "Address Change in Ration Card",
+        "eligibility": [
+          "தற்போது வசிக்கும் முகவரியின் ஆதாரம்"
+        ],
+        "eligibility_en": [
+          "Proof of current residential address"
+        ],
+        "documents": [
+          "ஆதார் அட்டை",
+          "குடும்ப அட்டை",
+          "சமையல் எரிவாயு இரசீது"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Ration Card",
+          "Cooking Gas Receipt"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "department": "மாற்றுத்திறனாளிகள் நலத்துறை",
+    "department_en": "Welfare of Differently Abled Persons Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/6.jpg",
+    "services": [
+      {
+        "name": "மாற்றுத்திறனாளிகளுக்கான அடையாள அட்டை (NIDC/UDID)",
+        "name_en": "Identity Card for Differently Abled Persons (NIDC/UDID)",
+        "eligibility": [
+          "உரிமைகள் சட்டம் 2016-இல் குறிப்பிடப்பட்ட இயலாமை உடையவர்கள்"
+        ],
+        "eligibility_en": [
+          "Persons with disabilities as specified in the Rights of Persons with Disabilities Act, 2016"
+        ],
+        "documents": [
+          "மருத்துவ சான்றிதழ்",
+          "ஆதார் அட்டை",
+          "பாஸ்போர்ட் புகைப்படம்"
+        ],
+        "documents_en": [
+          "Medical Certificate",
+          "Aadhaar Card",
+          "Passport size photograph"
+        ]
+      },
+      {
+        "name": "மாற்றுத்திறனாளிகளுக்கான பராமரிப்பு உதவித்தொகை",
+        "name_en": "Maintenance Allowance for Differently Abled Persons",
+        "eligibility": [
+          "40% மற்றும் அதற்கு மேல் இயலாமை",
+          "75% மற்றும் அதற்கு மேல் கடுமையான இயலாமை"
+        ],
+        "eligibility_en": [
+          "40% and above disability",
+          "75% and above severe disability"
+        ],
+        "documents": [
+          "NIDC/UDID சான்றிதழ்",
+          "வங்கிக்கணக்கு புத்தகம்",
+          "ஆதார் அட்டை",
+          "பாஸ்போர்ட் புகைப்படம்"
+        ],
+        "documents_en": [
+          "NIDC/UDID Certificate",
+          "Bank Account Passbook",
+          "Aadhaar Card",
+          "Passport size photograph"
+        ]
+      },
+      {
+        "name": "மாற்றுத்திறனாளிகளுக்கான சுயதொழில் கடனுதவி",
+        "name_en": "Self-Employment Loan Assistance for Differently Abled Persons",
+        "eligibility": [
+          "18 வயதிற்கு மேல்"
+        ],
+        "eligibility_en": [
+          "Above 18 years of age"
+        ],
+        "documents": [
+          "NIDC/UDID சான்றிதழ்",
+          "பாஸ்போர்ட் புகைப்படம்",
+          "ஆதார் அட்டை",
+          "வங்கிக்கணக்கு புத்தகம்"
+        ],
+        "documents_en": [
+          "NIDC/UDID Certificate",
+          "Passport size photograph",
+          "Aadhaar Card",
+          "Bank Account Passbook"
+        ]
+      },
+      {
+        "name": "பெட்ரோல் ஸ்கூட்டர், சக்கர நாற்காலி, செயற்கைக்கால், உதவி உபகரணங்கள்",
+        "name_en": "Petrol Scooter, Wheelchair, Prosthetic Leg, Assistive Devices",
+        "eligibility": [
+          "மாற்றுத்திறனாளிகள் மருத்துவ சான்றிதழுடன்"
+        ],
+        "eligibility_en": [
+          "Differently abled persons with a medical certificate"
+        ],
+        "documents": [
+          "மருத்துவ சான்றிதழ்",
+          "ஆதார் அட்டை",
+          "பாஸ்போர்ட் புகைப்படம்"
+        ],
+        "documents_en": [
+          "Medical Certificate",
+          "Aadhaar Card",
+          "Passport size photograph"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "department": "ஆதிதிராவிடர் மற்றும் பழங்குடியினர் நலத்துறை",
+    "department_en": "Adi Dravidar and Tribal Welfare Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/7.jpg",
+    "services": [
+      {
+        "name": "TAHDCO தொழில்முனைவோர் / சுய உதவிக்குழுக் கடன்",
+        "name_en": "TAHDCO Entrepreneur / Self-Help Group Loan",
+        "eligibility": [
+          "ஆதிதிராவிடர் / பழங்குடியினர் இனத்தை சேர்ந்தவர்",
+          "18-55 வயது",
+          "வருமானம் ரூ.3.00 லட்சத்திற்குள்",
+          "மற்ற திட்டங்களில் மானியம் பெற்றிருக்கக் கூடாது"
+        ],
+        "eligibility_en": [
+          "Belonging to Adi Dravidar / Tribal community",
+          "Age 18-55",
+          "Income within ₹3.00 lakh",
+          "Should not have received subsidy from other schemes"
+        ],
+        "documents": [
+          "ஆதார் அட்டை",
+          "சாதிச் சான்றிதழ்",
+          "வங்கி கணக்கு புத்தகம்",
+          "வருமானச் சான்று",
+          "திட்ட அறிக்கை",
+          "பாஸ்போர்ட் புகைப்படம்"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Community Certificate",
+          "Bank Account Passbook",
+          "Income Certificate",
+          "Project Report",
+          "Passport size photograph"
+        ]
+      },
+      {
+        "name": "இணையவழி வீட்டுமனைப் பட்டா",
+        "name_en": "Online House Site Patta",
+        "eligibility": [
+          "ஆதிதிராவிடர்/பழங்குடியினர்",
+          "வீடு கட்டி வசிக்க வேண்டும்"
+        ],
+        "eligibility_en": [
+          "Adi Dravidar/Tribal",
+          "Must be residing in a constructed house"
+        ],
+        "documents": [
+          "ஆதார் அட்டை",
+          "வருமானச் சான்று",
+          "சாதிச் சான்றிதழ்",
+          "குடும்ப அட்டை"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Income Certificate",
+          "Community Certificate",
+          "Ration Card"
+        ]
+      },
+      {
+        "name": "கல்வி உதவித்தொகை (பள்ளி/கல்லூரி)",
+        "name_en": "Educational Scholarship (School/College)",
+        "eligibility": [
+          "ஆதிதிராவிடர்/பழங்குடியினர்/கிறித்துவ ஆதிதிராவிடர் மாணவர்கள்",
+          "வருமானம் ரூ.2.5 லட்சத்திற்கு மிகாமல் இருக்க வேண்டும்"
+        ],
+        "eligibility_en": [
+          "Adi Dravidar/Tribal/Christian Adi Dravidar students",
+          "Income should not exceed ₹2.5 lakh"
+        ],
+        "documents": [
+          "வருமானச் சான்றிதழ்",
+          "சாதிச் சான்றிதழ்",
+          "Bonafide certificate",
+          "வங்கி கணக்கு புத்தகம்"
+        ],
+        "documents_en": [
+          "Income Certificate",
+          "Community Certificate",
+          "Bonafide certificate",
+          "Bank Account Passbook"
+        ]
+      },
+      {
+        "name": "தமிழ்நாடு தூய்மைப் பணியாளர்கள் நலவாரியம் – நலத்திட்டங்கள்",
+        "name_en": "Tamil Nadu Safai Karamcharis Welfare Board - Welfare Schemes",
+        "eligibility": [
+          "உறுப்பினராக பதிவு",
+          "வருமானம் ரூ.3 லட்சத்திற்குள்"
+        ],
+        "eligibility_en": [
+          "Registered as a member",
+          "Income within ₹3 lakh"
+        ],
+        "documents": [
+          "உறுப்பினர் அட்டை",
+          "ஆதார் அட்டை",
+          "குடும்ப அட்டை",
+          "வங்கி கணக்கு புத்தகம்",
+          "பாஸ்போர்ட் புகைப்படம்",
+          "அலுவலக அடையாள அட்டை",
+          "குழந்தைகள் கல்வி விபரம்"
+        ],
+        "documents_en": [
+          "Membership Card",
+          "Aadhaar Card",
+          "Ration Card",
+          "Bank Account Passbook",
+          "Passport size photograph",
+          "Office Identity Card",
+          "Children's education details"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "department": "பிற்படுத்தப்பட்டோர், மிகவும் பிற்படுத்தப்பட்டோர் மற்றும் சிறுபான்மையினர் நலத்துறை",
+    "department_en": "Backward Classes, Most Backward Classes and Minorities Welfare Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/8.jpg",
+    "services": [
+      {
+        "name": "தமிழ்நாடு பிற்படுத்தப்பட்டோர் பொருளாதார மேம்பாட்டுக் கழகம் (டாப்செட்கோ ) கடனுதவிகள்",
+        "name_en": "Tamil Nadu Backward Classes Economic Development Corporation (TABCEDCO) Loans",
+        "eligibility": [
+          "தமிழ்நாட்டினை வசிப்பிடமாக கொண்டவர்",
+          "பிற்படுத்தப்பட்டோர், மிகப்பிற்படுத்தப்பட்டோர் மற்றும் சீர்மரபினர் வகுப்பைச் சேர்ந்தவர்",
+          "வயது: 18 முதல் 60",
+          "வருமானம்: ரூ.3 லட்சம் (நீர்ப்பாசன வசதி திட்டத்திற்கு வரம்பு இல்லை)",
+          "ஒரே குடும்பத்தில் ஒருவருக்கே",
+          "போக்குவரத்து வாகனங்களுக்கு – ஓட்டுநர் உரிமம் அவசியம்"
+        ],
+        "eligibility_en": [
+          "Resident of Tamil Nadu",
+          "Belonging to Backward, Most Backward, and Denotified Communities class",
+          "Age: 18 to 60",
+          "Income: ₹3 lakh (no limit for irrigation facility scheme)",
+          "Only one person per family",
+          "For transport vehicles - Driver's license is mandatory"
+        ],
+        "documents": [
+          "சாதிச் சான்று (அ) பள்ளி மாற்றுச் சான்றிதழ்",
+          "சிறுபான்மையினர் மத சான்று (டாம்கோ)",
+          "வருமானச்சான்று",
+          "இருப்பிடச்சான்று",
+          "ஆதார் அட்டை",
+          "விலைப்புள்ளி சான்று",
+          "திட்ட தொழில் அறிக்கை",
+          "வங்கி அடமான ஆவணங்கள்",
+          "ஓட்டுநர் உரிமம்",
+          "Bonafide சான்றிதழ்",
+          "கல்விக்கட்டண செலுத்தல் ரசீது, மதிப்பெண் சான்றிதழ்"
+        ],
+        "documents_en": [
+          "Community certificate or School transfer certificate",
+          "Minority religious certificate (for TAMCO)",
+          "Income certificate",
+          "Residence certificate",
+          "Aadhaar card",
+          "Price quotation certificate",
+          "Project report",
+          "Bank mortgage documents",
+          "Driver's license",
+          "Bonafide certificate",
+          "Education fee payment receipt, marksheet"
+        ]
+      },
+      {
+        "name": "கல்வி உதவித்தொகை (பள்ளிப்படிப்பு/ கல்லூரிப் படிப்பு)",
+        "name_en": "Educational Scholarship (School/College)",
+        "eligibility": [
+          "பிற்படுத்தப்பட்டோர், மிகப்பிற்படுத்தப்பட்டோர் சீர்மரபினர் வகுப்பைச் சேர்ந்தவர்",
+          "பெற்றோர் ஆண்டு வருமானம் ரூ.2.5 லட்சத்திற்கு கீழ்",
+          "Bonafide சான்றிதழ் கட்டாயம்"
+        ],
+        "eligibility_en": [
+          "Belonging to Backward, Most Backward, Denotified Communities class",
+          "Parental annual income below ₹2.5 lakh",
+          "Bonafide certificate is mandatory"
+        ],
+        "documents": [
+          "சாதிச் சான்றிதழ்",
+          "வருமானச் சான்றிதழ்"
+        ],
+        "documents_en": [
+          "Community Certificate",
+          "Income Certificate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "department": "தொழிலாளர் நலன் மற்றும் திறன் மேம்பாட்டுத்துறை",
+    "department_en": "Labour Welfare and Skill Development Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/9.jpg",
+    "services": [
+      {
+        "name": "நலவாரியங்களில் உறுப்பினர் பதிவு",
+        "name_en": "Membership Registration in Welfare Boards",
+        "eligibility": [
+          "வயது: 18 முதல் 60"
+        ],
+        "eligibility_en": [
+          "Age: 18 to 60"
+        ],
+        "documents": [
+          "பணிச்சான்றிதழ்",
+          "குடும்ப அட்டை",
+          "வங்கிக் கணக்கு புத்தகம்",
+          "ஆதார் அட்டை",
+          "ஆதார் கைபேசி இணைப்பு"
+        ],
+        "documents_en": [
+          "Employment Certificate",
+          "Ration Card",
+          "Bank Account Passbook",
+          "Aadhaar Card",
+          "Aadhaar mobile link"
+        ]
+      },
+      {
+        "name": "பதிவு புதுப்பித்தல்",
+        "name_en": "Registration Renewal",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "குடும்ப அட்டை",
+          "ஆதார் அட்டை",
+          "பதிவு அட்டை",
+          "வங்கி கணக்கு புத்தகம்",
+          "ஆதார் கைபேசி இணைப்பு"
+        ],
+        "documents_en": [
+          "Ration Card",
+          "Aadhaar Card",
+          "Registration Card",
+          "Bank Account Passbook",
+          "Aadhaar mobile link"
+        ]
+      },
+      {
+        "name": "உதவித்தொகை",
+        "name_en": "Assistance/Scholarship",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "மதிப்பெண் சான்றிதழ்",
+          "பதிவு அட்டை",
+          "குடும்ப அட்டை",
+          "ஆதார் அட்டை",
+          "வங்கிக் கணக்கு புத்தகம் (முதல் பக்கம், கடைசி நடவடிக்கை பக்கம்)",
+          "மகன்/மகளுக்கான ஆதார் (அவருக்கான உதவித்தொகைக்கு)"
+        ],
+        "documents_en": [
+          "Marksheet",
+          "Registration Card",
+          "Ration Card",
+          "Aadhaar Card",
+          "Bank Account Passbook (first page, last transaction page)",
+          "Aadhaar of son/daughter (for their scholarship)"
+        ]
+      },
+      {
+        "name": "ஓய்வூதியம்",
+        "name_en": "Pension",
+        "eligibility": [
+          "60 வயது நிறைவு"
+        ],
+        "eligibility_en": [
+          "Completion of 60 years"
+        ],
+        "documents": [
+          "பதிவு அட்டை",
+          "குடும்ப அட்டை",
+          "ஆதார் அட்டை",
+          "வங்கிக் கணக்கு புத்தகம்"
+        ],
+        "documents_en": [
+          "Registration Card",
+          "Ration Card",
+          "Aadhaar Card",
+          "Bank Account Passbook"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "department": "கால்நடை பராமரிப்பு பால்வளம், மீன்வளம் மற்றும் மீனவர் நலத்துறை",
+    "department_en": "Animal Husbandry, Dairying, Fisheries and Fishermen Welfare Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/10.jpg",
+    "services": [
+      {
+        "name": "சிறிய அளவிலான நாட்டுக் கோழிப் பண்ணைகள்",
+        "name_en": "Small Scale Country Chicken Farms",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [
+          "நில உரிமைச் சான்று",
+          "உறுதி சான்று",
+          "வங்கி நிதி உறுதி சான்று",
+          "தனிப்பட்ட நிதி ஆதாரம்"
+        ],
+        "documents_en": [
+          "Land Ownership Certificate",
+          "Assurance Certificate",
+          "Bank Financial Assurance Certificate",
+          "Personal financial proof"
+        ]
+      },
+      {
+        "name": "கருவுற்ற பசுக்களுக்கு ஊட்டச்சத்து திட்டம்",
+        "name_en": "Nutrition Scheme for Pregnant Cows",
+        "eligibility": [
+          "பால் கூட்டுறவு உறுப்பினர்",
+          "பெண்கள் / விதவை / ஆதரவற்றோர் / மாற்றுத்திறனாளிகள் / SC/ST முன்னுரிமை"
+        ],
+        "eligibility_en": [
+          "Milk Cooperative Member",
+          "Priority for Women / Widows / Destitute / Differently-abled / SC/ST"
+        ],
+        "documents": [],
+        "documents_en": []
+      },
+      {
+        "name": "50% மானியத்தில் புல் நறுக்கும் கருவி",
+        "name_en": "Grass Cutter at 50% Subsidy",
+        "eligibility": [
+          "குறைந்தது 0.25 ஏக்கர் தீவன நிலம்",
+          "2 பெரிய கால்நடைகள்",
+          "சிறுகுறு விவசாயி, மின்வசதி உள்ளவர்",
+          "50% விலை செலுத்த தயாராக இருக்க வேண்டும்"
+        ],
+        "eligibility_en": [
+          "Minimum 0.25 acres of fodder land",
+          "2 large cattle",
+          "Small/marginal farmer with electricity connection",
+          "Must be ready to pay 50% of the price"
+        ],
+        "documents": [
+          "சிட்டா",
+          "அடங்கல்",
+          "ஆதார் அட்டை நகல்",
+          "சிறுகுறு விவசாயி சான்றிதழ்"
+        ],
+        "documents_en": [
+          "Chitta",
+          "Adangal",
+          "Aadhaar Card Copy",
+          "Small/Marginal Farmer Certificate"
+        ]
+      },
+      {
+        "name": "மீனவ இளைஞர்களுக்கு கடல்சார் கல்வி உதவித்தொகை",
+        "name_en": "Maritime Education Scholarship for Fishermen Youth",
+        "eligibility": [
+          "பெற்றோர்/காப்பாளர் மீனவ கூட்டுறவு உறுப்பினராக இருக்க வேண்டும்"
+        ],
+        "eligibility_en": [
+          "Parent/guardian must be a member of the fishermen cooperative society"
+        ],
+        "documents": [],
+        "documents_en": []
+      },
+      {
+        "name": "50% மானியத்தில் மீன்பிடி உபகரணங்கள்",
+        "name_en": "Fishing Equipment at 50% Subsidy",
+        "eligibility": [
+          "மீனவ கூட்டுறவு / மீன்வள மேம்பாட்டு முகமை உறுப்பினர்"
+        ],
+        "eligibility_en": [
+          "Member of Fishermen Cooperative / Fisheries Development Agency"
+        ],
+        "documents": [],
+        "documents_en": []
+      },
+      {
+        "name": "புதிய மீன் வளர்ப்பு குளங்கள்",
+        "name_en": "New Fish Culture Ponds",
+        "eligibility": [
+          "மீனவ தொழிலாளர்கள், கூட்டுறவு சங்கங்கள், தனியார் நிறுவனங்கள்"
+        ],
+        "eligibility_en": [
+          "Fishermen, cooperative societies, private companies"
+        ],
+        "documents": [
+          "ஆதார் அட்டை",
+          "மீனவர் அடையாள அட்டை",
+          "வங்கிக் கணக்கு புத்தகம்"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Fisherman Identity Card",
+          "Bank Account Passbook"
+        ]
+      },
+      {
+        "name": "ஒருங்கிணைந்த அலங்கார மீன் வளர்ப்பு",
+        "name_en": "Integrated Ornamental Fish Culture",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [],
+        "documents_en": []
+      },
+      {
+        "name": "குளிரூட்டப்பட்ட வாகனங்கள்",
+        "name_en": "Refrigerated Vehicles",
+        "eligibility": [],
+        "eligibility_en": [],
+        "documents": [],
+        "documents_en": []
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "department": "வீட்டு வசதி மற்றும் நகர்ப்புற வளர்ச்சித் துறை",
+    "department_en": "Housing and Urban Development Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/11.jpg",
+    "services": [
+      {
+        "name": "கட்டிடம்/மனைப்பிரிவு வரைபடம் திட்ட அனுமதி",
+        "name_en": "Building/Layout Plan Approval",
+        "eligibility": "வீட்டின் உரிமையாளராக இருத்தல் வேண்டும்",
+        "eligibility_en": "Must be the owner of the house",
+        "documents": [
+          "இணையதள விண்ணப்பம்",
+          "அணுகுசாலைக்கான புலவரைபடம் ‘அ’ பதிவேடு",
+          "பட்டா/சிட்டா/அடங்கல்",
+          "Town Survey Land Register",
+          "பதிவு செய்யப்பட்ட பொறியாளரின் கையொப்பம் இடப்பட்ட வரைபடங்கள் மற்றும் சட்டக் கருத்துரு"
+        ],
+        "documents_en": [
+          "Online application",
+          "Access road 'A' register map",
+          "Patta/Chitta/Adangal",
+          "Town Survey Land Register",
+          "Signed plans and legal opinion from a registered engineer"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "department": "குறு, சிறு மற்றும் நடுத்தர தொழில் நிறுவனங்கள் துறை",
+    "department_en": "Micro, Small and Medium Enterprises Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/12.jpg",
+    "services": [
+      {
+        "name": "NEEDS திட்டம்",
+        "name_en": "NEEDS Scheme",
+        "eligibility": "முதல் தலைமுறை தொழில் முனைவோர், வயது 21-45 (சிறப்பு பிரிவு மற்றும் மகளிருக்கு 21-55)",
+        "eligibility_en": "First generation entrepreneur, age 21-45 (21-55 for special category and women)",
+        "documents": [
+          "ஆதார் அட்டை",
+          "குடும்ப அட்டை",
+          "மாற்றுச் சான்றிதழ்",
+          "சாதிச் சான்றிதழ்",
+          "திட்ட அறிக்கை",
+          "விலைப்புள்ளி"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Ration Card",
+          "Transfer Certificate",
+          "Community Certificate",
+          "Project Report",
+          "Quotation"
+        ]
+      },
+      {
+        "name": "கலைஞர் கைவினைத் திட்டம் (KKT)",
+        "name_en": "Kalaignar's Handicrafts Scheme (KKT)",
+        "eligibility": "35 வயதிற்கு மேற்பட்ட கைவினைஞர்கள் அல்லது 5 ஆண்டு அனுபவம் உள்ளவர்கள்",
+        "eligibility_en": "Artisans above 35 years or those with 5 years of experience",
+        "documents": [
+          "ஆதார் அட்டை",
+          "வங்கிக் கணக்கு விவரங்கள்",
+          "திட்ட அறிக்கை",
+          "விலைப்புள்ளி",
+          "சுய உறுதிமொழி"
+        ],
+        "documents_en": [
+          "Aadhaar Card",
+          "Bank account details",
+          "Project Report",
+          "Quotation",
+          "Self-declaration"
+        ]
+      },
+      {
+        "name": "UYEGP வேலைவாய்ப்பு உருவாக்கும் திட்டம்",
+        "name_en": "UYEGP Employment Generation Scheme",
+        "eligibility": "வயது 18-45 (சிறப்பு பிரிவுக்கு 55), வருமானம் ரூ.8 லட்சத்திற்கு கீழ், 8ம் வகுப்பு தேர்ச்சி",
+        "eligibility_en": "Age 18-45 (55 for special category), income below ₹8 lakh, 8th standard pass",
+        "documents": [
+          "விலைப்புள்ளி",
+          "கல்வி சான்றிதழ்",
+          "இருப்பிட சான்றிதழ்",
+          "சாதிச் சான்றிதழ்"
+        ],
+        "documents_en": [
+          "Quotation",
+          "Educational Certificate",
+          "Residence Certificate",
+          "Community Certificate"
+        ]
+      },
+      {
+        "name": "அண்ணல் அம்பேத்கர் தொழில் முன்னோடிகள் திட்டம்",
+        "name_en": "Annal Ambedkar Business Pioneers Scheme",
+        "eligibility": "ஆதி திராவிடர்/பழங்குடியின தொழில் முனைவோர், வயது 18-55, வருமான வரம்பு இல்லை",
+        "eligibility_en": "Adi Dravidar/Tribal entrepreneurs, age 18-55, no income limit",
+        "documents": [
+          "சாதிச் சான்றிதழ்",
+          "பள்ளி மாற்றுச் சான்றிதழ்",
+          "ஆதார் அட்டை",
+          "திட்ட அறிக்கை",
+          "விலைப்புள்ளி",
+          "வாடகை ஒப்பந்தம்",
+          "கட்டிட மதிப்பீடு",
+          "நில ஒப்பந்த நகல்"
+        ],
+        "documents_en": [
+          "Community Certificate",
+          "School Transfer Certificate",
+          "Aadhaar Card",
+          "Project Report",
+          "Quotation",
+          "Rental Agreement",
+          "Building Valuation",
+          "Copy of Land Agreement"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "department": "சமூக நலன் மற்றும் மகளிர் உரிமைத் துறை",
+    "department_en": "Social Welfare and Women Empowerment Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/13.jpg",
+    "services": [
+      {
+        "name": "முதலமைச்சர் பெண் குழந்தை பாதுகாப்பு திட்டம்",
+        "name_en": "Chief Minister's Girl Child Protection Scheme",
+        "eligibility": "1 பெண் குழந்தைக்கு 3 வயதுக்குள், 2வது பெண் குழந்தைக்கு 3 வயதுக்குள். பெற்றோர் 10 ஆண்டு வசிப்பவை",
+        "eligibility_en": "For 1 girl child within 3 years of age, for the 2nd girl child within 3 years of age. Parents must be residents for 10 years",
+        "documents": [
+          "இருப்பிடச் சான்று",
+          "சாதிச் சான்று",
+          "பிறப்புச் சான்று",
+          "வருமானச் சான்று",
+          "ஆண் குழந்தை இல்லை என்பதற்கான சான்று",
+          "கருத்தடை அறுவை சிகிச்சை சான்று"
+        ],
+        "documents_en": [
+          "Residence Certificate",
+          "Community Certificate",
+          "Birth Certificate",
+          "Income Certificate",
+          "Certificate of no male child",
+          "Sterilization surgery certificate"
+        ]
+      },
+      {
+        "name": "ஆதரவற்ற குழந்தைகளுக்கான நிதி ஆதரவுத் திட்டம்",
+        "name_en": "Financial Support Scheme for Orphaned Children",
+        "eligibility": "பெற்றோர் இருவரையும் இழந்தோர், கைவிடப்பட்டோர், அல்லது உடல்/மன பாதிப்பு உள்ள பெற்றோர் கொண்டோர்",
+        "eligibility_en": "Those who have lost both parents, are abandoned, or have parents with physical/mental disabilities",
+        "documents": [
+          "குடும்ப அட்டை",
+          "குழந்தையின் ஆதார்",
+          "வயது சான்று",
+          "வங்கி கணக்கு புத்தகம்"
+        ],
+        "documents_en": [
+          "Ration Card",
+          "Child's Aadhaar",
+          "Age Proof",
+          "Bank Account Passbook"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "department": "வேளாண்மை – உழவர் நலத்துறை",
+    "department_en": "Agriculture - Farmers Welfare Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/14.jpg",
+    "services": [
+      {
+        "name": "வேளாண் இடுபொருட்கள் (மாணிய விலையில்)",
+        "name_en": "Agricultural Inputs (at subsidized prices)",
+        "eligibility": "சக்திவாய்ந்த விவசாயிகள் மற்றும் திட்ட வரையறைக்கேற்ப பயனாளிகள்",
+        "eligibility_en": "Eligible farmers and beneficiaries as per scheme guidelines",
+        "documents": [
+          "நில உரிமை சான்று",
+          "சிறு/குறு விவசாயி சான்று",
+          "ஆதார்",
+          "வங்கி கணக்கு புத்தகம்",
+          "பாஸ்போர்ட் புகைப்படம்"
+        ],
+        "documents_en": [
+          "Land Ownership Certificate",
+          "Small/Marginal Farmer Certificate",
+          "Aadhaar",
+          "Bank Account Passbook",
+          "Passport size photograph"
+        ]
+      },
+      {
+        "name": "நுண்ணீர்ப்பாசனம் தொடர்பான கோரிக்கைகள்",
+        "name_en": "Requests related to Micro-irrigation",
+        "eligibility": "சொந்த நிலம் அல்லது பதிவு செய்யப்பட்ட குத்தகை நிலம்",
+        "eligibility_en": "Own land or registered leased land",
+        "documents": [
+          "நில உரிமை சான்று",
+          "நில வரைபடம்",
+          "குத்தகை ஒப்பந்தம்",
+          "அண்மையில் பெற்ற பாசன ஒப்புதல்",
+          "பாஸ்போர்ட் புகைப்படம்",
+          "குடும்ப அட்டை",
+          "கிணறு ஆவணம்",
+          "நீர்/மண் பரிசோதனை",
+          "விவசாயி சான்று",
+          "ஆதார்"
+        ],
+        "documents_en": [
+          "Land Ownership Certificate",
+          "Land Map",
+          "Lease Agreement",
+          "Recently obtained irrigation approval",
+          "Passport size photograph",
+          "Ration Card",
+          "Well document",
+          "Water/Soil test",
+          "Farmer certificate",
+          "Aadhaar"
+        ]
+      },
+      {
+        "name": "வேளாண் இயந்திரங்கள்/கருவிகள் மானியத்தில்",
+        "name_en": "Agricultural Machinery/Tools on Subsidy",
+        "eligibility": "நிலம் உடைய விவசாயிகள்",
+        "eligibility_en": "Farmers who own land",
+        "documents": [
+          "பட்டா/சிட்டா/அடங்கல்",
+          "புல வரைபடம்",
+          "விவசாயி சான்று",
+          "ஆதார்",
+          "சாதிச் சான்றிதழ்",
+          "பாஸ்போர்ட் புகைப்படம்"
+        ],
+        "documents_en": [
+          "Patta/Chitta/Adangal",
+          "Field Map",
+          "Farmer Certificate",
+          "Aadhaar",
+          "Community Certificate",
+          "Passport size photograph"
+        ]
+      },
+      {
+        "name": "இ-வாடகை சேவை",
+        "name_en": "e-Rental Service",
+        "eligibility": "உழவன் செயலியில் பதிவு செய்யப்பட்ட விவசாயிகள்",
+        "eligibility_en": "Farmers registered in the Uzhavan app",
+        "documents": [
+          "நில விவரங்கள்",
+          "தேவைப்படும் உபகரண விவரம்",
+          "ஆதார்",
+          "பணம் செலுத்தல் ரசீது",
+          "உழவன் செயலியில் பதிவு"
+        ],
+        "documents_en": [
+          "Land details",
+          "Details of required equipment",
+          "Aadhaar",
+          "Payment receipt",
+          "Registration in Uzhavan app"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "department": "தகவல் தொழில்நுட்பவியல் மற்றும் டிஜிட்டல் சேவைகள் துறை",
+    "department_en": "Information Technology and Digital Services Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/15.jpg",
+    "services": [
+      {
+        "name": "ஆதார் சேவைகள் (புதிய/தொகுப்பு/திருத்த)",
+        "name_en": "Aadhaar Services (New/Update/Correction)",
+        "eligibility": "UIDAI ஆவண வழிகாட்டுதலின்படி",
+        "eligibility_en": "As per UIDAI document guidelines",
+        "documents": [
+          "UIDAI ஆவண பட்டியலில் உள்ள ஆளறிச் சான்றுகள், முகவரிச் சான்றுகள், பிறப்புச் சான்றுகள்"
+        ],
+        "documents_en": [
+          "Proof of Identity, Proof of Address, Proof of Birth as per the UIDAI document list"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "department": "சிறப்புத் திட்ட செயலாக்கத் துறை",
+    "department_en": "Special Programme Implementation Department",
+    "image_url": "https://ungaludanstalin.tn.gov.in/assets/images/rural/16.jpg",
+    "services": [
+      {
+        "name": "கலைஞர் மகளிர் உரிமைத் தொகை",
+        "name_en": "Kalaignar Magalir Urimai Thogai (Kalaignar Women's Rights Grant)",
+        "eligibility": "21 வயதுக்கு மேல் மகளிர், குடும்ப வருமானம் ரூ.2.5 இலட்சத்திற்குள், அரசு ஊழியர்/நிதி தரவுகள் சார்ந்த தடை உள்ள குடும்பங்களை தவிர",
+        "eligibility_en": "Women above 21 years, family income within ₹2.5 lakh, excluding families with government employees/financial data restrictions",
+        "documents": [
+          "குடும்ப அட்டை",
+          "ஆதார் அட்டை",
+          "வங்கி கணக்கு புத்தகம்",
+          "மின் கட்டண ரசீது"
+        ],
+        "documents_en": [
+          "Ration Card",
+          "Aadhaar Card",
+          "Bank Account Passbook",
+          "Electricity Bill Receipt"
+        ]
+      }
+    ]
+  }
+]
