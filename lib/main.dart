@@ -1,11 +1,18 @@
 import 'dart:convert';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:makkal_sevai_guide/firebase_options.dart';
 import 'package:upgrader/upgrader.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // Entry point of the Flutter application.
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const ServiceFinderApp());
 }
 
@@ -111,11 +118,25 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   bool _isEnglish = true;
+  final String _campaignUrl = 'https://ungaludanstalin.tn.gov.in/camp.php';
 
   void _toggleLanguage() {
     setState(() {
       _isEnglish = !_isEnglish;
     });
+  }
+
+  Future<void> _launchURL(String url) async {
+    final uri = Uri.parse(url);
+    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(_isEnglish ? 'Could not open the link.' : 'இணைப்பைத் திறக்க முடியவில்லை.'),
+          ),
+        );
+      }
+    }
   }
 
   @override
@@ -143,9 +164,14 @@ class _MainScreenState extends State<MainScreen> {
           onThemeChanged: widget.onThemeChanged,
           isEnglish: _isEnglish,
         ),
-        // The body is now directly the ServiceFinderScreen
         body: ServiceFinderScreen(isEnglish: _isEnglish),
-        // No BottomNavigationBar is needed for a single screen app.
+        // Add the FloatingActionButton here
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: () => _launchURL(_campaignUrl),
+          label: Text(_isEnglish ? 'Camp Schedule' : 'முகாம் அட்டவணை'),
+          icon: const Icon(Icons.public),
+          tooltip: _isEnglish ? 'Visit Ungaludan Stalin Camp Schedule' : 'உங்களுடன் ஸ்டாலின் முகாம் அட்டவணையைப் பார்வையிடவும்',
+        ),
       ),
     );
   }
@@ -321,18 +347,6 @@ class _ServiceFinderScreenState extends State<ServiceFinderScreen> {
             ),
           ),
         ),
-        // Disclaimer Banner
-        Container(
-          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-          color: Theme.of(context).colorScheme.secondaryContainer.withOpacity(0.5),
-          child: Text(
-            widget.isEnglish ? "Unofficial, offline-first guide." : "அதிகாரப்பூர்வமற்ற, ஆஃப்லைன் வழிகாட்டி.",
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-              color: Theme.of(context).colorScheme.onSecondaryContainer,
-            ),
-          ),
-        ),
       ],
     );
   }
@@ -404,6 +418,20 @@ class AppDrawer extends StatelessWidget {
             secondary: Icon(isDark ? Icons.dark_mode : Icons.light_mode),
           ),
           const Divider(),
+          ListTile(
+            leading: const Icon(Icons.open_in_new), // Icon for opening external content
+            title: Text(isEnglish ? 'Open Brochure' : 'வளையலை திறக்க'), // Text for the menu item
+            onTap: () {
+              Navigator.pop(context); // Closes the drawer first
+              Navigator.push( // Pushes the new screen onto the navigation stack
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DepartmentOverviewScreen(isEnglish: isEnglish),
+                ),
+              );
+            },
+          ),
+          const Divider(), // Add a divider for separation
           ListTile(
             leading: const Icon(Icons.info_outline),
             title: Text(isEnglish ? 'Disclaimer' : 'பொறுப்புத் துறப்பு'),
@@ -598,6 +626,166 @@ ${documentsList.map((e) => '- $e').join('\n')}
             ),
           )),
         ],
+      ),
+    );
+  }
+}
+
+class DepartmentOverviewScreen extends StatefulWidget {
+  final bool isEnglish;
+  const DepartmentOverviewScreen({super.key, required this.isEnglish});
+
+  @override
+  State<DepartmentOverviewScreen> createState() => _DepartmentOverviewScreenState();
+}
+
+class _DepartmentOverviewScreenState extends State<DepartmentOverviewScreen> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+  String? _ruralDownloadUrl;
+  String? _urbanDownloadUrl;
+  bool _isLoadingUrls = true;
+
+  // Define paths to your images in Firebase Storage
+  final String _ruralStoragePath = 'brochure/rural.jpg'; // *** Adjust this path ***
+  final String _urbanStoragePath = 'brochure/urban.jpg'; // *** Adjust this path ***
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+    _loadDownloadUrls();
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  Future<void> _loadDownloadUrls() async {
+    try {
+      final ruralRef = FirebaseStorage.instance.ref(_ruralStoragePath);
+      final urbanRef = FirebaseStorage.instance.ref(_urbanStoragePath);
+
+      _ruralDownloadUrl = await ruralRef.getDownloadURL();
+      _urbanDownloadUrl = await urbanRef.getDownloadURL();
+
+      debugPrint("Rural URL: $_ruralDownloadUrl");
+      debugPrint("Urban URL: $_urbanDownloadUrl");
+    } catch (e) {
+      debugPrint("Error loading download URLs: $e");
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              widget.isEnglish ? 'Failed to load brochure images.' : 'பிரசுரப் படங்களை ஏற்ற முடியவில்லை.',
+            ),
+          ),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isLoadingUrls = false;
+        });
+      }
+    }
+  }
+
+  // New function to launch the URL
+  Future<void> _launchImageUrl(String imageUrl) async {
+    final uri = Uri.parse(imageUrl);
+    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) { // Use externalApplication
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              widget.isEnglish ? 'Could not open the brochure.' : 'வளையலை திறக்க முடியவில்லை.',
+            ),
+          ),
+        );
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.isEnglish ? 'Download Brochure' : 'வளையலை பதிவிறக்கவும்'),
+        bottom: TabBar(
+          controller: _tabController,
+          tabs: [
+            Tab(text: widget.isEnglish ? 'Rural' : 'கிராமப்புறம்'),
+            Tab(text: widget.isEnglish ? 'Urban' : 'நகர்ப்புறம்'),
+          ],
+        ),
+      ),
+      body: _isLoadingUrls
+          ? const Center(child: CircularProgressIndicator())
+          : TabBarView(
+        controller: _tabController,
+        children: [
+          _buildBrochureView(_ruralDownloadUrl),
+          _buildBrochureView(_urbanDownloadUrl),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBrochureView(String? imageUrl) {
+    if (imageUrl == null || imageUrl.isEmpty) {
+      return Center(
+        child: Text(
+          widget.isEnglish ? 'Brochure not available.' : 'வளையலை கிடைக்கவில்லை.',
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
+      );
+    }
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            // Display the image (optional, you could just have a button)
+            Image.network(
+              imageUrl,
+              fit: BoxFit.contain,
+              loadingBuilder: (context, child, loadingProgress) {
+                if (loadingProgress == null) return child;
+                return Center(
+                  child: CircularProgressIndicator(
+                    value: loadingProgress.expectedTotalBytes != null
+                        ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes!
+                        : null,
+                  ),
+                );
+              },
+              errorBuilder: (context, error, stackTrace) {
+                return Center(
+                  child: Text(
+                    widget.isEnglish ? 'Error loading image preview.' : 'பட முன்னோட்டத்தை ஏற்றும் பிழை.',
+                    style: TextStyle(color: Theme.of(context).colorScheme.error),
+                  ),
+                );
+              },
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton.icon(
+              onPressed: () => _launchImageUrl(imageUrl), // Launch URL on button press
+              icon: const Icon(Icons.open_in_new), // Changed icon to indicate opening
+              label: Text(widget.isEnglish ? 'Open Brochure' : 'வளையலை திறக்க'), // Changed text
+            ),
+            const SizedBox(height: 10),
+            Text(
+              widget.isEnglish
+                  ? 'Tap "Open Brochure" to view it in your default browser or image viewer.'
+                  : 'உங்கள் இயல்புநிலை உலாவி அல்லது பட வியூவரில் காண "வளையலை திறக்க" என்பதைத் தட்டவும்.',
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1132,5 +1132,52 @@
         ]
       }
     ]
+  },
+  {
+    "id": 14,
+    "department": "சிறப்புத் திட்ட செயலாக்கத் துறை",
+    "department_en": "Special Programme Implementation Department",
+    "services": [
+      {
+        "name": "கலைஞர் மகளிர் உரிமைத் தொகை (தகுதியுள்ள / விடுபட்ட மகளிர், முகாமில் வழங்கப்படும் விண்ணப்பத்தினை பூர்த்தி செய்து அளிக்கவும்)",
+        "name_en": "Kalaignar Magalir Urimai Thogai (Eligible / Omitted Women, please fill and submit the application provided at the camp)",
+        "eligibility": [
+          "21 வயது நிரம்பிய மகளிராக இருக்க வேண்டும்",
+          "ஏற்கனவே குடும்பத்தில் எவரும் கலைஞர் மகளிர் உரிமைத்தொகை பெறுபவராக இருக்கக் கூடாது. குடும்ப ஆண்டு வருமானம் ரூ.2.5 இலட்சத்திற்குள் இருக்க வேண்டும்",
+          "5 ஏக்கருக்கு குறைவாக நன்செய் நிலம் (அ) 10 ஏக்கருக்கு குறைவாக புன்செய் நிலம் வைத்துள்ள குடும்பங்கள்.",
+          "ஆண்டிற்கு வீட்டு உபயோகத்திற்கு 3,600 யூனிட்டிற்கும் குறைவாக மின்சாரம் பயன்படுத்தும் குடும்பங்கள்.",
+          "மாற்றுத்திறனாளி ஓய்வூதியம்/பராமரிப்பு உதவித்தொகை/ முதியோர் ஓய்வூதியம்/முதலமைச்சரின் உழவர் பாதுகாப்புத் திட்டம்/அமைப்பு சாரா தொழிலாளர் நல வாரிய முதியோர் ஓய்வூதியம், இந்திரா காந்தி தேசிய விதவை ஓய்வூதியம், ஆதரவற்ற விதவைகள், ஆதரவற்ற/கணவரால் கைவிடப்பட்ட பெண்களுக்கான ஓய்வூதியம் மற்றும் 50 வயதிற்கு மேற்பட்ட திருமணமாகாத ஏழைப் பெண்களுக்கான ஓய்வூதியம் பெறும் நபர்களை தவிர அக்குடும்பத்தில் மற்ற தகுதிவாய்ந்த பெண்கள் விண்ணப்பிக்கலாம்.",
+          "குடும்பத்தில் வருமான வரி கணக்கு தாக்கல் செய்பவர் /வருமான வரி/தொழில்வரி செலுத்துபவர்/ரூ.50 இலட்சத்திற்கு மேல் ஆண்டு விற்பனை செய்து GST செலுத்துபவராக இருக்கக்கூடாது.",
+          "குடும்ப உறுப்பினர்களில் தேர்ந்தெடுக்கப்பட்ட மக்கள் பிரதிநிதிகள் இருக்கக் கூடாது (ஊராட்சி மன்ற வார்டு உறுப்பினர்களைத் தவிர)",
+          "சொந்தப் பயன்பாட்டுக்கு நான்கு சக்கர வாகனங்கள் வைத்திருக்கக் கூடாது.(அரசுதிட்டங்களின் கீழ் மானியம் பெற்று அதன் மூலம் நான்கு சக்கரம் வாகனம் வைத்திருக்கும் குடும்பங்களில் உள்ள தகுதி வாய்ந்த பெண்கள் விண்ணப்பிக்கலாம்)",
+          "அரசு ஊழியர்கள் / பொதுத்துறை நிறுவனங்கள் / வங்கி ஊழியர்கள் / வாரியங்கள், உள்ளாட்சி அமைப்புகள் / கூட்டுறவு அமைப்புகளின் ஊழியர்கள் மற்றும் அவற்றின் ஓய்வூதியதாரர்களாக இருக்கக் கூடாது",
+          "சிறப்பு கால முறை ஊதியம் (Special Time Scale) பெற்று பணியாற்றி தற்போது ஓய்வூதியம் பெறும் ஓய்வூதியதாரர் தவிர அக்குடும்பத்தில் இருக்கும் மற்ற தகுதி வாய்ந்த பெண்கள் விண்ணப்பிக்கலாம்."
+        ],
+        "eligibility_en": [
+          "Should be a woman aged 21 years or above.",
+          "No one in the family should already be receiving Kalaignar Magalir Urimai Thogai. Family's annual income should be within ₹2.5 lakhs.",
+          "Families owning less than 5 acres of wet land or less than 10 acres of dry land.",
+          "Families consuming less than 3,600 units of electricity annually for domestic use.",
+          "Except for individuals receiving Disability Pension/Maintenance Allowance/Old Age Pension/Chief Minister's Uzhavar Pathukappu Thittam/Unorganized Workers' Welfare Board Old Age Pension, Indira Gandhi National Widow Pension, Destitute Widows, Pension for Destitute/Deserted Women by husband, and Pension for Unmarried Poor Women above 50 years, other eligible women in the family can apply.",
+          "No one in the family should be filing income tax returns / paying income tax / professional tax / paying GST for annual sales above ₹50 lakhs.",
+          "No elected public representatives should be family members (excluding Panchayat ward members).",
+          "Should not own a four-wheeler for personal use. (Eligible women in families owning a four-wheeler through government scheme subsidies can apply).",
+          "Should not be government employees / public sector employees / bank employees / board, local body, or cooperative society employees and their pensioners.",
+          "Except for pensioners receiving Special Time Scale pay and currently receiving pension, other eligible women in the family can apply."
+        ],
+        "documents": [
+          "குடும்ப அட்டை",
+          "ஆதார் அட்டை",
+          "வங்கி கணக்கு புத்தகம்",
+          "மின் கட்டண ரசீது"
+        ],
+        "documents_en": [
+          "Family Card (Ration Card)",
+          "Aadhaar Card",
+          "Bank Passbook",
+          "Electricity Bill"
+        ]
+      }
+    ]
   }
 ]

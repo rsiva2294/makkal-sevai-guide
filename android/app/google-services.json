@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "759842997417",
+    "project_id": "makkal-sevai-guide",
+    "storage_bucket": "makkal-sevai-guide.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759842997417:android:3fe276ba098585320e15b8",
+        "android_client_info": {
+          "package_name": "in.smstraders.makkalsevaiguide.makkal_sevai_guide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhSWBpJQ9GGVcmFc5g0jigTXLJkZZgUlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
