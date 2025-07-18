@@ -1,14 +1,15 @@
 import 'dart:convert';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:makkal_sevai_guide/firebase_options.dart';
-import 'package:upgrader/upgrader.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:upgrader/upgrader.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'dart:typed_data';
 
 // Entry point of the Flutter application.
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -164,14 +165,13 @@ class _MainScreenState extends State<MainScreen> {
           onThemeChanged: widget.onThemeChanged,
           isEnglish: _isEnglish,
         ),
-        body: ServiceFinderScreen(isEnglish: _isEnglish),
-        // Add the FloatingActionButton here
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () => _launchURL(_campaignUrl),
           label: Text(_isEnglish ? 'Camp Schedule' : 'முகாம் அட்டவணை'),
           icon: const Icon(Icons.public),
           tooltip: _isEnglish ? 'Visit Ungaludan Stalin Camp Schedule' : 'உங்களுடன் ஸ்டாலின் முகாம் அட்டவணையைப் பார்வையிடவும்',
         ),
+        body: ServiceFinderScreen(isEnglish: _isEnglish),
       ),
     );
   }
@@ -193,6 +193,10 @@ class _ServiceFinderScreenState extends State<ServiceFinderScreen> {
   ServiceInfo? _selectedService;
   final TextEditingController _searchController = TextEditingController();
 
+  // Define Firebase Storage paths for your JSON files
+  final String _ruralJsonStoragePath = 'json/rural.json';
+  final String _urbanJsonStoragePath = 'json/urban.json';
+
   @override
   void initState() {
     super.initState();
@@ -211,7 +215,6 @@ class _ServiceFinderScreenState extends State<ServiceFinderScreen> {
   @override
   void didUpdateWidget(covariant ServiceFinderScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
-    // Update search bar text if language changes while a service is selected
     if (widget.isEnglish != oldWidget.isEnglish) {
       if (_selectedService != null) {
         _searchController.text = widget.isEnglish ? _selectedService!.serviceNameEn : _selectedService!.serviceName;
@@ -220,25 +223,89 @@ class _ServiceFinderScreenState extends State<ServiceFinderScreen> {
   }
 
   Future<void> _loadAllData() async {
-    // Prevent reloading if data already exists
-    if (_allServices.isNotEmpty) {
-      setState(() => _isLoading = false);
-      return;
-    }
-    try {
-      final String ruralResponse = await rootBundle.loadString('assets/rural.json');
-      final List<dynamic> ruralData = json.decode(ruralResponse);
-      _parseAndAddServices(ruralData, 'Rural');
+    // Set loading state and clear any previous data
+    if (mounted) setState(() => _isLoading = true);
+    _allServices.clear();
 
-      final String urbanResponse = await rootBundle.loadString('assets/urban.json');
-      final List<dynamic> urbanData = json.decode(urbanResponse);
-      _parseAndAddServices(urbanData, 'Urban');
-    } catch (e) {
-      debugPrint("Error loading data: $e");
-    } finally {
-      if(mounted) setState(() => _isLoading = false);
+    bool loadedFromFirebase = false;
+
+    // --- Attempt to load from Firebase Storage first ---
+    try {
+      debugPrint("Attempting to load data from Firebase Storage...");
+      final FirebaseStorage storage = FirebaseStorage.instance;
+
+      // Fetch Rural data from Firebase
+      final Reference ruralRef = storage.ref(_ruralJsonStoragePath);
+      final Uint8List? ruralBytes = await ruralRef.getData(); // Get data as bytes
+      if (ruralBytes != null) {
+        final String ruralResponse = utf8.decode(ruralBytes); // Decode bytes to string
+        final List<dynamic> ruralData = json.decode(ruralResponse); // Parse JSON
+        _parseAndAddServices(ruralData, 'Rural');
+        debugPrint("Successfully loaded Rural data from Firebase.");
+        loadedFromFirebase = true;
+      } else {
+        debugPrint("Rural data not found on Firebase Storage (bytes were null).");
+        loadedFromFirebase = false; // Ensure fallback
+      }
+
+      // Fetch Urban data from Firebase
+      final Reference urbanRef = storage.ref(_urbanJsonStoragePath);
+      final Uint8List? urbanBytes = await urbanRef.getData(); // Get data as bytes
+      if (urbanBytes != null) {
+        final String urbanResponse = utf8.decode(urbanBytes); // Decode bytes to string
+        final List<dynamic> urbanData = json.decode(urbanResponse); // Parse JSON
+        _parseAndAddServices(urbanData, 'Urban');
+        debugPrint("Successfully loaded Urban data from Firebase.");
+        loadedFromFirebase = true; // Still true if rural was successful and urban too
+      } else {
+        debugPrint("Urban data not found on Firebase Storage (bytes were null).");
+        loadedFromFirebase = false; // Ensure fallback if urban fails even if rural succeeded
+      }
+
+      if (loadedFromFirebase) {
+        // If we reached here and loaded both, then Firebase load was successful.
+        debugPrint("All data loaded successfully from Firebase Storage.");
+      }
+
+    } catch (firebaseError) {
+      debugPrint("Failed to load data from Firebase Storage: $firebaseError. Falling back to assets.");
+      loadedFromFirebase = false; // Explicitly set to false to trigger fallback
+      _allServices.clear(); // Clear any partial data loaded from Firebase if an error occurred.
+    }
+
+    // --- Fallback to loading from local assets if Firebase load failed ---
+    if (!loadedFromFirebase || _allServices.isEmpty) { // Check _allServices.isEmpty in case partial load failed gracefully
+      try {
+        debugPrint("Loading data from local assets (fallback)...");
+        final String ruralResponse = await rootBundle.loadString('assets/rural.json');
+        final List<dynamic> ruralData = json.decode(ruralResponse);
+        _parseAndAddServices(ruralData, 'Rural');
+        debugPrint("Successfully loaded Rural data from assets.");
+
+        final String urbanResponse = await rootBundle.loadString('assets/urban.json');
+        final List<dynamic> urbanData = json.decode(urbanResponse);
+        _parseAndAddServices(urbanData, 'Urban');
+        debugPrint("Successfully loaded Urban data from assets.");
+
+      } catch (assetError) {
+        debugPrint("Critical Error: Failed to load data from local assets: $assetError");
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(widget.isEnglish ? 'Failed to load data from any source. Please check your internet or restart the app.' : 'எந்த மூலத்திலிருந்தும் தரவை ஏற்ற முடியவில்லை. உங்கள் இணைய இணைப்பைச் சரிபார்க்கவும் அல்லது பயன்பாட்டை மறுதொடக்கம் செய்யவும்.')),
+          );
+        }
+      }
+    }
+
+    if (mounted) {
+      setState(() => _isLoading = false); // Update UI state
+      // Perform an initial search if the search controller has text (e.g., after hot reload)
+      if (_searchController.text.isNotEmpty) {
+        _performSearch(_searchController.text);
+      }
     }
   }
+
 
   void _parseAndAddServices(List<dynamic> data, String type) {
     for (var department in data) {
@@ -352,7 +419,7 @@ class _ServiceFinderScreenState extends State<ServiceFinderScreen> {
   }
 }
 
-// Navigation Drawer Widget
+// Navigation Drawer Widget (no changes needed here related to data loading)
 class AppDrawer extends StatelessWidget {
   final ValueChanged<ThemeMode> onThemeChanged;
   final bool isEnglish;
@@ -418,12 +485,13 @@ class AppDrawer extends StatelessWidget {
             secondary: Icon(isDark ? Icons.dark_mode : Icons.light_mode),
           ),
           const Divider(),
+          // This ListTile opens the DepartmentOverviewScreen (for brochure images)
           ListTile(
-            leading: const Icon(Icons.open_in_new), // Icon for opening external content
-            title: Text(isEnglish ? 'Open Brochure' : 'வளையலை திறக்க'), // Text for the menu item
+            leading: const Icon(Icons.open_in_new),
+            title: Text(isEnglish ? 'Open Brochure' : 'வளையலை திறக்க'),
             onTap: () {
-              Navigator.pop(context); // Closes the drawer first
-              Navigator.push( // Pushes the new screen onto the navigation stack
+              Navigator.pop(context);
+              Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => DepartmentOverviewScreen(isEnglish: isEnglish),
@@ -431,7 +499,7 @@ class AppDrawer extends StatelessWidget {
               );
             },
           ),
-          const Divider(), // Add a divider for separation
+          const Divider(),
           ListTile(
             leading: const Icon(Icons.info_outline),
             title: Text(isEnglish ? 'Disclaimer' : 'பொறுப்புத் துறப்பு'),
