@@ -698,7 +698,7 @@ class AppDrawer extends StatelessWidget {
             leading: const Icon(Icons.star_outline),
             title: Text(isEnglish ? 'Rate this App' : 'செயலியை மதிப்பிடுக'),
             onTap: () {
-              _launchURL('https://play.google.com/store/apps/details?id=in.smstraders.makkalsevaiguide', 'rate_app'); // Pass linkName
+              _launchURL('https://play.google.com/store/apps/details?id=in.smstraders.makkalsevaiguide.makkal_sevai_guide', 'rate_app'); // Pass linkName
             },
           ),
         ],
