@@ -43,3 +43,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Firebase config file - DO NOT COMMIT
+lib/firebase_options.dart
