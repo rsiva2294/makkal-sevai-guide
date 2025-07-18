@@ -93,11 +93,10 @@ class _MainScreenState extends State<MainScreen> {
           onThemeChanged: widget.onThemeChanged,
           isEnglish: _isEnglish,
         ),
-        floatingActionButton: FloatingActionButton.extended(
-          onPressed: () => _launchURL(_campaignUrl, 'camp_schedule'), // Pass linkName
-          label: Text(_isEnglish ? 'Camp Schedule' : 'முகாம் அட்டவணை'),
-          icon: const Icon(Icons.public),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => _launchURL(_campaignUrl, 'camp_schedule'),
           tooltip: _isEnglish ? 'Visit Ungaludan Stalin Camp Schedule' : 'உங்களுடன் ஸ்டாலின் முகாம் அட்டவணையைப் பார்வையிடவும்',
+          child: const Icon(Icons.calendar_month),
         ),
         body: ServiceFinderScreen(isEnglish: _isEnglish),
       ),

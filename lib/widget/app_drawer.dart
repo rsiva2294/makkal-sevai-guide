@@ -10,6 +10,9 @@ class AppDrawer extends StatelessWidget {
 
   const AppDrawer({super.key, required this.onThemeChanged, required this.isEnglish});
 
+  // Define the campaign URL here as it's used directly in the drawer
+  final String _campaignUrl = 'https://ungaludanstalin.tn.gov.in/camp.php';
+
   Future<void> _launchURL(String url, String linkName) async {
     final uri = Uri.parse(url);
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
@@ -88,12 +91,26 @@ class AppDrawer extends StatelessWidget {
           DrawerHeader(
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary,
+              image: DecorationImage(
+                image: const AssetImage('assets/icon/logo.png'),
+                fit: BoxFit.cover,
+                alignment: Alignment.centerRight,
+                opacity: 0.85,
+                colorFilter: ColorFilter.mode(
+                  Theme.of(context).colorScheme.onPrimary.withOpacity(0.3),
+                  BlendMode.modulate,
+                ),
+              ),
             ),
-            child: Text(
-              isEnglish ? 'Makkal Sevai Guide' : 'மக்கள் சேவை வழிகாட்டி',
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.onPrimary,
-                fontSize: 24,
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                isEnglish ? 'Makkal Sevai Guide' : 'மக்கள் சேவை வழிகாட்டி',
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -118,6 +135,15 @@ class AppDrawer extends StatelessWidget {
             secondary: Icon(isDark ? Icons.dark_mode : Icons.light_mode),
           ),
           const Divider(),
+          // New: Camp Schedule option in the drawer
+          ListTile(
+            leading: const Icon(Icons.calendar_month),
+            title: Text(isEnglish ? 'Camp Schedule' : 'முகாம் அட்டவணை'),
+            onTap: () {
+              Navigator.pop(context); // Close the drawer
+              _launchURL(_campaignUrl, 'camp_schedule_drawer'); // Use the same URL as FAB, with a distinct linkName for analytics
+            },
+          ),
           ListTile(
             leading: const Icon(Icons.open_in_new),
             title: Text(isEnglish ? 'Open Brochure' : 'வளையலை திறக்க'),
