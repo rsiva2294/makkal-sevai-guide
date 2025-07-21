@@ -1,3 +1,5 @@
+// lib/screen/department_overview.dart
+
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -19,8 +21,8 @@ class _DepartmentOverviewScreenState extends State<DepartmentOverviewScreen> wit
   bool _isLoadingUrls = true;
 
   // Define paths to your images in Firebase Storage
-  final String _ruralStoragePath = 'brochure/rural.jpg'; // *** Adjust this path ***
-  final String _urbanStoragePath = 'brochure/urban.jpg'; // *** Adjust this path ***
+  final String _ruralBrochureStoragePath = 'brochure/rural.jpg'; // *** Adjust this path ***
+  final String _urbanBrochureStoragePath = 'brochure/urban.jpg'; // *** Adjust this path ***
 
   @override
   void initState() {
@@ -38,8 +40,8 @@ class _DepartmentOverviewScreenState extends State<DepartmentOverviewScreen> wit
   Future<void> _loadDownloadUrls() async {
     try {
       debugPrint("Attempting to load brochure URLs from Firebase Storage...");
-      final ruralRef = FirebaseStorage.instance.ref(_ruralStoragePath);
-      final urbanRef = FirebaseStorage.instance.ref(_urbanStoragePath);
+      final ruralRef = FirebaseStorage.instance.ref(_ruralBrochureStoragePath);
+      final urbanRef = FirebaseStorage.instance.ref(_urbanBrochureStoragePath);
 
       _ruralDownloadUrl = await ruralRef.getDownloadURL();
       _urbanDownloadUrl = await urbanRef.getDownloadURL();
@@ -126,11 +128,31 @@ class _DepartmentOverviewScreenState extends State<DepartmentOverviewScreen> wit
       ),
       body: _isLoadingUrls
           ? const Center(child: CircularProgressIndicator())
-          : TabBarView(
-        controller: _tabController,
+          : Column( // Wrap TabBarView and Disclaimer in a Column
         children: [
-          _buildBrochureView(_ruralDownloadUrl, 'rural'), // Pass type
-          _buildBrochureView(_urbanDownloadUrl, 'urban'), // Pass type
+          Expanded( // TabBarView takes remaining space
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                _buildBrochureView(_ruralDownloadUrl, 'rural'), // Pass type
+                _buildBrochureView(_urbanDownloadUrl, 'urban'), // Pass type
+              ],
+            ),
+          ),
+          // Disclaimer Banner (copied from ServiceFinderScreen)
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+            color: Theme.of(context).colorScheme.secondaryContainer.withOpacity(0.5),
+            child: Text(
+              widget.isEnglish
+                  ? "Brochure obtained from the official Ungaludan Stalin website. Not owned by this app."
+                  : "இந்த வளையலை உங்களுடன் ஸ்டாலின் இணையதளத்திலிருந்து பெறப்பட்டது. இது இந்த செயலியின் சொந்தம் அல்ல.",
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: Theme.of(context).colorScheme.onSecondaryContainer,
+              ),
+            ),
+          ),
         ],
       ),
     );

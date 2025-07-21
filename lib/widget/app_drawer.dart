@@ -3,45 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:makkal_sevai_guide/screen/department_overview.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-// Navigation Drawer Widget
 class AppDrawer extends StatelessWidget {
   final ValueChanged<ThemeMode> onThemeChanged;
   final bool isEnglish;
+  final Future<void> Function(String url, String linkName) onLaunchURL; // New callback
 
-  const AppDrawer({super.key, required this.onThemeChanged, required this.isEnglish});
+  const AppDrawer({
+    super.key,
+    required this.onThemeChanged,
+    required this.isEnglish,
+    required this.onLaunchURL, // Require the new callback
+  });
 
-  // Define the campaign URL here as it's used directly in the drawer
   final String _campaignUrl = 'https://ungaludanstalin.tn.gov.in/camp.php';
 
-  Future<void> _launchURL(String url, String linkName) async {
-    final uri = Uri.parse(url);
-    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-      // Log failure to launch URL
-      FirebaseAnalytics.instance.logEvent(
-        name: 'url_launch_failed',
-        parameters: {
-          'url': url,
-          'reason': 'could_not_launch',
-          'link_name': linkName,
-          'language': isEnglish ? 'English' : 'Tamil',
-        },
-      );
-      throw 'Could not launch $url'; // Rethrow to be caught by PlatformDispatcher
-    } else {
-      // Analytics for Successful URL Launches from Drawer
-      FirebaseAnalytics.instance.logEvent(
-        name: 'external_link_clicked',
-        parameters: {
-          'link_name': linkName,
-          'url': url,
-          'language': isEnglish ? 'English' : 'Tamil',
-        },
-      );
-    }
-  }
+  // Remove the _launchURL method from AppDrawer, as it's now passed in.
+  // Future<void> _launchURL(String url, String linkName) async { ... }
 
   void _showDisclaimerDialog(BuildContext context) {
-    // Analytics for Disclaimer Dialog Opened
     FirebaseAnalytics.instance.logEvent(
       name: 'disclaimer_dialog_opened',
       parameters: {
@@ -66,7 +45,6 @@ class AppDrawer extends StatelessWidget {
               child: Text(isEnglish ? "Close" : "மூடுக"),
               onPressed: () {
                 Navigator.of(context).pop();
-                // Analytics for Disclaimer Dialog Closed
                 FirebaseAnalytics.instance.logEvent(
                   name: 'disclaimer_dialog_closed',
                   parameters: {
@@ -84,11 +62,13 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
+            padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary,
               image: DecorationImage(
@@ -103,7 +83,7 @@ class AppDrawer extends StatelessWidget {
               ),
             ),
             child: Align(
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.bottomLeft,
               child: Text(
                 isEnglish ? 'Makkal Sevai Guide' : 'மக்கள் சேவை வழிகாட்டி',
                 style: TextStyle(
@@ -122,7 +102,6 @@ class AppDrawer extends StatelessWidget {
               final String newTheme = value ? 'Dark' : 'Light';
               onThemeChanged(value ? ThemeMode.dark : ThemeMode.light);
 
-              // Analytics for Theme Switch
               FirebaseAnalytics.instance.logEvent(
                 name: 'theme_switched',
                 parameters: {
@@ -135,13 +114,13 @@ class AppDrawer extends StatelessWidget {
             secondary: Icon(isDark ? Icons.dark_mode : Icons.light_mode),
           ),
           const Divider(),
-          // New: Camp Schedule option in the drawer
+          // Camp Schedule option in the drawer
           ListTile(
             leading: const Icon(Icons.calendar_month),
             title: Text(isEnglish ? 'Camp Schedule' : 'முகாம் அட்டவணை'),
             onTap: () {
               Navigator.pop(context); // Close the drawer
-              _launchURL(_campaignUrl, 'camp_schedule_drawer'); // Use the same URL as FAB, with a distinct linkName for analytics
+              onLaunchURL(_campaignUrl, 'camp_schedule_drawer'); // Use the passed callback
             },
           ),
           ListTile(
@@ -149,13 +128,16 @@ class AppDrawer extends StatelessWidget {
             title: Text(isEnglish ? 'Open Brochure' : 'வளையலை திறக்க'),
             onTap: () {
               Navigator.pop(context);
+              // For DepartmentOverviewScreen, you might not want the extra confirmation
+              // as it's an internal screen that then launches external.
+              // If DepartmentOverviewScreen itself launches URLs, it should implement its own _launchURL with confirmation.
+              // For now, we'll just navigate directly.
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => DepartmentOverviewScreen(isEnglish: isEnglish),
                 ),
               );
-              // Analytics for Brochure Screen Access
               FirebaseAnalytics.instance.logEvent(
                 name: 'brochure_screen_accessed',
                 parameters: {
@@ -176,13 +158,21 @@ class AppDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.code),
             title: Text(isEnglish ? 'About the Developer' : 'டெவலப்பர் பற்றி'),
-            onTap: () => _launchURL('https://www.linkedin.com/in/sivakaminathan-muthusamy/', 'developer_profile'), // Pass linkName
+            onTap: () => onLaunchURL('https://www.linkedin.com/in/sivakaminathan-muthusamy/', 'developer_profile'), // Use the passed callback
           ),
           ListTile(
             leading: const Icon(Icons.star_outline),
             title: Text(isEnglish ? 'Rate this App' : 'செயலியை மதிப்பிடுக'),
             onTap: () {
-              _launchURL('https://play.google.com/store/apps/details?id=in.smstraders.makkalsevaiguide.makkal_sevai_guide', 'rate_app'); // Pass linkName
+              onLaunchURL('https://play.google.com/store/apps/details?id=in.smstraders.makkalsevaiguide.makkal_sevai_guide', 'rate_app'); // Use the passed callback
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.privacy_tip_outlined), // Or Icons.policy
+            title: Text(isEnglish ? 'Privacy Policy' : 'தனியுரிமைக் கொள்கை'),
+            onTap: () {
+              Navigator.pop(context); // Close the drawer
+              onLaunchURL('https://rsiva2294.github.io/makkal-sevai-guide/', 'privacy_policy'); // Use the passed callback
             },
           ),
         ],
